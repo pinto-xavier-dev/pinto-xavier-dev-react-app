@@ -24,5 +24,4 @@ const Header = ({ handleSubmit, sortHandler }) => {
        </>
     )
 }
-
 export default Header;
