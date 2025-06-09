@@ -5,6 +5,9 @@ const Header = ({ handleSubmit, sortHandler }) => {
     const [open, setOpen] = useState(false);
 
     return(
+        <>
+        <h1>pintoxavier.in</h1>
+
         <div className="flex justify-between w-2/4">
             <button onClick={() => setOpen(true)}
              className="bg-indigo-500 hover:bg-indigo-600 text-white font-medium rounded-md px-5 py-2">Add Task</button>
@@ -18,6 +21,7 @@ const Header = ({ handleSubmit, sortHandler }) => {
             { open && <DialogTodoItem mode="add" open={open} setOpen={setOpen} handleSubmit={handleSubmit}/> }
 
         </div>
+       </>
     )
 }
 
