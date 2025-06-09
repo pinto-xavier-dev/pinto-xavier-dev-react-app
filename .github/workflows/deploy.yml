@@ -31,3 +31,4 @@ jobs:
           external_repository: pinto-xavier-dev/pinto-xavier-dev.github.io
           publish_branch: main
           publish_dir: ./build
+          cname: software-developer.pintoxavier.in
