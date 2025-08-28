@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Network } from "lucide-react"
 const showDebug = false;
 
 const Sidebar = ({ onTechSelect, selectedTech }) => {
