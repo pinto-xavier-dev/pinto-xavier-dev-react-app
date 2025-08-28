@@ -1,8 +1,12 @@
-export default function Header() {
+const Header = () => {
   return (
-    <header className="bg-indigo-700 text-white p-6 shadow-md flex justify-between items-center">
-      <h1 className="text-2xl font-bold">🌐 Web Engineering Portfolio</h1>
-      <p className="text-sm">Software Developer | Cloud | Micro Frondend & Microservices </p>
+    <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 shadow-lg">
+      <div className="container mx-auto px-4 flex items-center justify-between">
+        <h1 className="text-3xl font-bold animate-pulse">Software Engineer</h1>
+        <p className="text-lg">Innovation • Development • Excellence</p>
+      </div>
     </header>
   );
-}
+};
+
+export default Header;

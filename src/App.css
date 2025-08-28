@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-blob,
+  .animate-pulse-slow {
+    animation: none !important;
+  }
+}
+
+@layer utilities {
+  /* Dot grid for light theme */
+  .bg-dot-grid {
+    background-image: radial-gradient(rgba(0,0,0,0.15) 0.8px, transparent 0.8px);
+    background-size: 20px 20px;
+  }
+
+  /* Vignette: light glow instead of dark shadow */
+  .bg-radial-vignette {
+    background: radial-gradient(1000px circle at 50% 40%,
+      rgba(255,255,255,0.90) 0%,   /* bright center */
+      rgba(255,255,255,0.75) 30%,  /* soft fade */
+      rgba(200,200,200,0.50) 75%,  /* dim edges */
+      rgba(220,220,220,0.80) 100%  /* gentle vignette */
+    );
+    mix-blend-mode: normal; /* no overlay, so it doesn’t darken */
+  }
+
+  /* Scanlines: subtle dark lines instead of white */
+  .bg-scanlines {
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        rgba(0,0,0,0.05) 0px,
+        rgba(0,0,0,0.05) 1px,
+        transparent 1px,
+        transparent 3px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        rgba(0,0,0,0.03) 0px,
+        rgba(0,0,0,0.03) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+    background-size: 100% 4px, 4px 100%;
+    opacity: 0.08; /* keep subtle */
+    mask-image: radial-gradient(1200px 1200px at 50% 40%, #000 60%, transparent 100%);
+  }
+}

@@ -12,7 +12,7 @@ export default function BottomSection() {
         <a href="https://linkedin.com/in/yourprofile" target="_blank" className="underline">
           LinkedIn
         </a>
-        <p>Previous Companies: Microsoft, Infosys, TCS</p>
+        <p>Previous Companies:  DXC, SLB, siemens</p>
       </div>
     </section>
   );
