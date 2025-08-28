@@ -26,7 +26,7 @@ const App = () => {
       <div className="relative z-10 flex flex-col min-h-screen">
         <Header />
         <div className="flex flex-1">
-          <MainSection selectedTech={selectedTech} />
+          <MainSection selectedTech={selectedTech}  onClose={() => setSelectedTech(null)} />
           <Sidebar onTechSelect={setSelectedTech} selectedTech={selectedTech} />
         </div>
         <Footer />
